@@ -26,11 +26,4 @@ public class Main {
         System.out.println("измененый год книги Dokkaebi - " + dokkaebi.getYearPublishing());
 
     }
-
-
-
-
-
-
-
 }
