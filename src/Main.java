@@ -14,12 +14,14 @@ public class Main {
         System.out.println("фамилия автора - " + kim.getLastName());
 
 
-        Book mockingbird = new Book("Mockingbird", 1960);
+        Book mockingbird=new Book("Mockingbird", 1960, "Harper Lee");
         System.out.println("название книги - " + mockingbird.getBookNames());
         System.out.println("год выпуска - " + mockingbird.getYearPublishing());
-        Book dokkaebi= new Book("Dokkaebi", 2016);
+        System.out.println("автор книги - " + mockingbird.getAuthor());
+        Book dokkaebi= new Book("Dokkaebi", 2016, "Kim Eun Sook");
         System.out.println("название книги - " + dokkaebi.getBookNames());
         System.out.println("год выпуска - " + dokkaebi.getYearPublishing());
+        System.out.println("автор книги - " + dokkaebi.getAuthor());
         mockingbird.setYearPublishing(1987);
         System.out.println("измененый год книги Mockingbird - " + mockingbird.getYearPublishing());
         dokkaebi.setYearPublishing(1238);
