@@ -1,23 +1,36 @@
 public class Main {
-
-
     public static void main(String[] args) {
-        String nameJohn="John";
-        int ageJohn=13;
-        String nameSarah="Sarah";
-        int ageSarah=30;
-        String[]names={"John","Sarah"};
-        int[]ages={13,30};
-        for (int i = 0; i < names.length; i++) {
-            System.out.println("Имя - "+names[i]+". Возраст - "+ages[i]);
-        }
-        Person sarah=new Person("Sarah", 30);
-        System.out.println("sarah.name = " + sarah.getName());
-        System.out.println("sarah.age = " + sarah.getAge());
-        sarah.setAge(31);
-        System.out.println("sarah.getAge() = " + sarah.getAge());
-        Person john=new Person("John",13);
+        //String[]bookNames={"Mockingbird","Dokkaebi"};
+        //        int[]yearPublishing={1960,2016};
+        //        String [] name={"Harper","Kim"};
+        //        String [] lastName={"Lee","Eun Sook"};
 
+
+        Author harper = new Author("Harper", "Lee");
+        System.out.println("имя автора - " + harper.getAuthorName());
+        System.out.println("фамилия автора - " + harper.getLastName());
+        Author kim = new Author("Kim", "Eun Sook");
+        System.out.println("имя автора - " + kim.getAuthorName());
+        System.out.println("фамилия автора - " + kim.getLastName());
+
+
+        Book mockingbird = new Book("Mockingbird", 1960);
+        System.out.println("название книги - " + mockingbird.getBookNames());
+        System.out.println("год выпуска - " + mockingbird.getYearPublishing());
+        Book dokkaebi= new Book("Dokkaebi", 2016);
+        System.out.println("название книги - " + dokkaebi.getBookNames());
+        System.out.println("год выпуска - " + dokkaebi.getYearPublishing());
+        mockingbird.setYearPublishing(1987);
+        System.out.println("измененый год книги Mockingbird - " + mockingbird.getYearPublishing());
+        dokkaebi.setYearPublishing(1238);
+        System.out.println("измененый год книги Dokkaebi - " + dokkaebi.getYearPublishing());
 
     }
+
+
+
+
+
+
+
 }
