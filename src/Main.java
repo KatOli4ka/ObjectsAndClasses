@@ -1,27 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        //String[]bookNames={"Mockingbird","Dokkaebi"};
-        //        int[]yearPublishing={1960,2016};
-        //        String [] name={"Harper","Kim"};
-        //        String [] lastName={"Lee","Eun Sook"};
-
 
         Author harper = new Author("Harper", "Lee");
-        System.out.println("имя автора - " + harper.getAuthorName());
-        System.out.println("фамилия автора - " + harper.getLastName());
+        System.out.println("имя автора - " + harper.getAuthorName()+", фамилия автора - " + harper.getLastName());
         Author kim = new Author("Kim", "Eun Sook");
-        System.out.println("имя автора - " + kim.getAuthorName());
-        System.out.println("фамилия автора - " + kim.getLastName());
+        System.out.println("имя автора - " + kim.getAuthorName()+", фамилия автора - " + kim.getLastName());
+
+        Book mockingbird=new Book("Mockingbird",harper, 1960);
+        System.out.println("название книги - " + mockingbird.getBookNames()+", год выпуска - " + mockingbird.getYearPublishing());
+        Book dokkaebi= new Book("Dokkaebi", kim, 2016);
+        System.out.println("название книги - " + dokkaebi.getBookNames()+", год выпуска - " + dokkaebi.getYearPublishing());
 
 
-        Book mockingbird=new Book("Mockingbird", 1960, "Harper Lee");
-        System.out.println("название книги - " + mockingbird.getBookNames());
-        System.out.println("год выпуска - " + mockingbird.getYearPublishing());
-        System.out.println("автор книги - " + mockingbird.getAuthor());
-        Book dokkaebi= new Book("Dokkaebi", 2016, "Kim Eun Sook");
-        System.out.println("название книги - " + dokkaebi.getBookNames());
-        System.out.println("год выпуска - " + dokkaebi.getYearPublishing());
-        System.out.println("автор книги - " + dokkaebi.getAuthor());
         mockingbird.setYearPublishing(1987);
         System.out.println("измененый год книги Mockingbird - " + mockingbird.getYearPublishing());
         dokkaebi.setYearPublishing(1238);
